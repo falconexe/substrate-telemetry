@@ -22,7 +22,7 @@ WORKDIR /app
 
 COPY --from=builder /opt/builder/scripts/*.sh /usr/local/bin/
 COPY --from=builder /opt/builder/build /app
-COPY --from=builder /opt/builder/nginx/nginx.conf /etc/nginx/nginx.conf
+#COPY --from=builder /opt/builder/nginx/nginx.conf /etc/nginx/nginx.conf
 
 RUN apk add --no-cache bash && \
     chown -R nginx:nginx /app && \
